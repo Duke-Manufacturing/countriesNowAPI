@@ -39,9 +39,9 @@ jobs:
       - name: Upload Lambda artifact to S3
         run: aws s3 cp ${{ env.LAMBDA_ZIP }} s3://${{ env.S3_BUCKET }}/lambda/${{ env.LAMBDA_ZIP }}
       # Optional: Update Lambda function code directly
-      # - name: Update Lambda function
-      #   run: |
-      #     aws lambda update-function-code \
-      #       --function-name ${{ env.LAMBDA_FUNCTION_NAME }} \
-      #       --s3-bucket ${{ env.S3_BUCKET }} \
-      #       --s3-key lambda/${{ env.LAMBDA_ZIP }}
+      - name: Update Lambda function
+        run: |
+          aws lambda update-function-code \
+            --function-name ${{ env.LAMBDA_FUNCTION_NAME }} \
+            --s3-bucket ${{ env.S3_BUCKET }} \
+            --s3-key lambda/${{ env.LAMBDA_ZIP }}
