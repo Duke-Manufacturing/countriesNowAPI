@@ -19,7 +19,7 @@ jobs:
       AWS_REGION: us-east-2
       LAMBDA_ZIP: maui_api.zip
       S3_BUCKET: maui-api
-      LAMBDA_FUNCTION_NAME: prod-lambda
+      LAMBDA_FUNCTION_NAME: maui-api
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
