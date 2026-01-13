@@ -17,8 +17,8 @@ jobs:
         node-version: [16.11.0]
     env:
       AWS_REGION: us-east-2
-      LAMBDA_ZIP: lambda.zip
-      S3_BUCKET: prod-app-bucket
+      LAMBDA_ZIP: maui_api.zip
+      S3_BUCKET: maui-api
       LAMBDA_FUNCTION_NAME: prod-lambda
     steps:
       - uses: actions/checkout@v2
